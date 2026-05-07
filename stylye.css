@@ -1,0 +1,250 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Times New Roman", serif;
+    background:white;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background-color: rgb(102,53,53);
+    min-height:100px;
+    text-align:center;
+    position:relative;
+    padding-top:20px;
+}
+
+/* LOGO */
+.logo img{
+    width:290px;
+    margin-bottom:8px;
+}
+
+/* ========== MAIN NAVBAR ========== */
+
+.main-navbar{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:0px;
+}
+
+.main-menu{
+    width:100%;
+    list-style:none;
+    display:flex;
+    gap:3px;
+}
+
+.main-menu li:first-child,
+.main-menu li:last-child{
+    flex:2; 
+}
+
+.main-menu li{
+    flex:1;
+    background: linear-gradient(to bottom, #a8e8ba, #76c993);
+    padding:10px 0;
+    transition:0.3s;
+}
+
+.main-menu li:hover{
+    background: linear-gradient(to bottom, #bdf2ca, #89d7a4);
+}
+
+.main-menu li a{
+    text-decoration:none;
+    color:rgb(102,53,53);
+    font-size:21px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+
+
+/* ===== DESKTOP (default) ===== */
+.menu-toggle{
+    display:none; /* ❌ الزر مخفي في الحاسوب */
+}
+
+
+/* ===== MOBILE ONLY ===== */
+@media (max-width:768px){
+
+    /* زر يظهر فقط في الهاتف */
+    .menu-toggle{
+        display:block;
+        position:fixed;
+        top:15px;
+        right:20px;
+        font-size:32px;
+        background:none;
+        border:none;
+        cursor:pointer;
+        z-index:2000;
+        color:white;
+    }
+
+    /* نخفي النافبار ونخليه dropdown */
+    .main-navbar{
+        display:none;
+        position:fixed;
+        top:60px;
+        right:20px;
+
+        width:250px;
+        background:rgb(102,53,53);
+
+        flex-direction:column;
+        border-radius:12px;
+        overflow:hidden;
+
+        box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+        z-index:1500;
+        animation:fadeIn 0.2s ease;
+    }
+
+    .main-navbar.active{
+        display:flex;
+    }
+
+    .main-menu{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .main-menu li{
+        width:100%;
+        padding:12px;
+        border-bottom:1px solid rgba(255,255,255,0.1);
+        background:none;
+    }
+
+    .main-menu li a{
+        color:white;
+    }
+
+    .main-menu li:hover{
+        background:rgba(255,255,255,0.1);
+    }
+
+    .hero-title h2{
+        font-size:70px;
+    }
+}
+
+/* animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.hero img{
+    width:100%;
+    display:block;
+}
+.title-box h2{
+    width:100%;
+    text-align:center;
+    background-color:#663535;
+    color:#fff;
+    padding:20px 10px;
+    margin:0px 0;
+    font-size:20px;
+    letter-spacing:3px;
+}
+@media (max-width:768px){
+    .title-box h2{
+        font-size:16px;
+        padding:14px 8px;
+    }
+}
+.about-section{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+    padding:40px 20px;
+
+    /* الخلفية الخضراء */
+    background: linear-gradient(to bottom, #a8e8ba, #76c993);
+
+    border-radius:10px;
+    margin:0px 0%;
+}
+
+/* الصورة يسار */
+.about-section img{
+    width:45%;
+    border-radius:12px;
+    object-fit:cover;
+}
+
+/* النص يمين */
+/* العنوان */
+.about-text h3{
+    font-family:'Roboto', sans-serif;
+    color:#663535;
+
+    text-align:left;
+    font-size:32px;
+    font-weight:700;
+
+    margin-bottom:25px;
+}
+
+/* الفقرات */
+.about-text p{
+    font-family:'Roboto', sans-serif;
+    color:#663535;
+
+    font-size:17px;
+    line-height:1.9;
+
+    margin-bottom:20px;
+    text-align:justify;
+}
+/* تنسيق الفقرات */
+.about-text p{
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:25px;
+    text-align:justify;
+}
+
+/* Responsive */
+@media (max-width:768px){
+
+    .about-section{
+        flex-direction:column; /* الصورة فوق والنص تحت */
+        align-items:center;
+    }
+
+    .about-section img{
+        width:100%;
+        max-width:700px;
+    }
+
+    .about-text{
+        width:100%;
+    }
+
+    .about-text p{
+        text-align:center;
+    }
+}
