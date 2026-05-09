@@ -301,7 +301,7 @@ body{
     font-size:22px;
     color:#fff;
 
-    background:linear-gradient(145deg, #6b3e2e, #3b221a);
+    background:linear-gradient(145deg, #a8e8ba, #76c993);
     border:none;
     border-radius:50%;
 
@@ -327,9 +327,12 @@ body{
     display:none;
 }
 
+
+
 /* يظهر فقط في الهاتف */
 @media (max-width:768px){
     .menu-toggle{
         display:flex; /* أو block */
     }
 }
+
