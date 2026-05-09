@@ -1,0 +1,376 @@
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cinzel', serif;
+    background:#ffffff;
+}
+
+/* ================= HEADER ================= */
+header{
+    width:100%;
+    background:rgb(102,53,53);
+    text-align:center;
+    padding-top:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    position:relative;
+    z-index:1000;
+}
+
+/* ================= LOGO (ZONE 01) ================= */
+.logo img{
+    width:100px;
+    margin-bottom:8px;
+}
+
+/* ================= MENU BUTTON ================= */
+.menu-toggle{
+    display:none;
+    position:fixed;
+    top:15px;
+    right:20px;
+    width:55px;
+    height:55px;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    color:#fff;
+    background:linear-gradient(145deg, #6b3e2e, #3b221a);
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    transition:0.3s;
+    z-index:2000;
+}
+
+.menu-toggle:hover{
+    transform:scale(1.08);
+}
+
+.menu-toggle:active{
+    transform:scale(0.95);
+}
+
+/* ================= MAIN NAVBAR (ZONE 02) ================= */
+.main-navbar{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.main-menu{
+    width:100%;
+    list-style:none;
+    display:flex;
+    gap:3px;
+}
+
+.main-menu li{
+    flex:1;
+    background:linear-gradient(to bottom, #a8e8ba, #76c993);
+    padding:10px 0;
+    text-align:center;
+    transition:0.3s;
+}
+
+.main-menu li:hover{
+    background:linear-gradient(to bottom, #bdf2ca, #89d7a4);
+}
+
+.main-menu li a{
+    text-decoration:none;
+    color:rgb(102,53,53);
+    font-size:21px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* ================= HERO TITLE (ZONE 03) ================= */
+.hero-title h2{
+    font-family:'Pinyon Script', cursive;
+    font-size:110px;
+    font-weight:400;
+    color:#7fd89a;
+    margin:0;
+    letter-spacing:2px;
+}
+
+/* ================= SUB NAVBAR ================= */
+/* ================= SUB NAVBAR STICKY ================= */
+/* يبقى في أعلى الصفحة عند الوصول إليه أثناء التمرير */
+.sub-navbar{
+    display:flex;
+    justify-content:center;
+    margin-top:0;
+
+    position:sticky;   /* يصبح ثابتاً عند الوصول إليه */
+    top:0;             /* يلتصق بأعلى نافذة المتصفح */
+    z-index:999;       /* يبقى فوق المحتوى */
+}
+
+.sub-menu{
+    width:95%;
+    list-style:none;
+    display:flex;
+    gap:4px;
+}
+
+.sub-menu li{
+    flex:1;
+    background:#e7efe7;
+    padding:14px 5px;
+    transition:0.3s;
+}
+
+.sub-menu li:hover{
+    background:#cfe6d4;
+}
+
+.sub-menu li a{
+    text-decoration:none;
+    color:rgb(102,53,53);
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:0.5px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width:768px){
+
+    /* زر القائمة يظهر */
+    .menu-toggle{
+        display:flex;
+    }
+
+    /* Zone 02 تختفي في الهاتف */
+    .main-navbar{
+        display:none;
+    }
+
+    /* العنوان يبقى ظاهر */
+    .hero-title h2{
+        font-size:70px;
+    }
+
+    /* Zone 03 تتحول إلى قائمة جانبية */
+    .sub-navbar{
+        display:none;
+        position:fixed;
+        top:80px;
+        right:10px;
+        width:270px;
+        background:rgb(102,53,53);
+        border-radius:12px;
+        overflow:hidden;
+        box-shadow:0 10px 25px rgba(0,0,0,0.25);
+        z-index:1500;
+    }
+
+    /* تظهر عند الضغط */
+    .sub-navbar.active{
+        display:flex;
+    }
+
+    .sub-menu{
+        width:100%;
+        flex-direction:column;
+        gap:0;
+    }
+
+    .sub-menu li{
+        width:100%;
+        background:none;
+        padding:14px 18px;
+        text-align:right;
+        border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    .sub-menu li a{
+        color:#ffffff;
+        font-size:14px;
+    }
+}
+
+
+
+    /* main */
+
+    /* ================= SECTION TITLES ================= */
+
+/* الحاوية العامة */
+.menu-section{
+    width:100%;
+    padding:40px 0 20px;
+}
+
+/* ===== H1 + H3 في الوسط ===== */
+.section-intro{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-intro h1{
+    color:rgb(102,53,53); /* بني */
+    font-size:55px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.section-intro h3{
+    color:rgb(102,53,53);
+    font-size:37px;
+    font-weight:400;
+    font-style:italic;
+    margin:0;
+}
+
+/* ===== H2 على اليسار مع خط تحته ===== */
+.section-category{
+    width:90%;          /* يترك فراغ يمين ويسار */
+    margin:0 auto;      /* توسيط الحاوية */
+    border-bottom:10px solid rgb(102,53,53);
+    border-radius: 12%;
+    padding-bottom:10px;
+}
+
+.section-category h2{
+    color:rgb(102,53,53);
+    font-size:32px;
+    font-weight:700;
+    margin:0;
+    text-align:left;
+}
+
+/* ===== Responsive ===== */
+@media (max-width:768px){
+
+    .section-intro h1{
+        font-size:28px;
+    }
+
+    .section-intro h3{
+        font-size:18px;
+    }
+
+    .section-category{
+        width:92%;
+    }
+
+    .section-category h2{
+        font-size:24px;
+    }
+}
+
+/* card */
+/* الكونتينر */
+.menu-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;                 /* مسافة مناسبة بين الكاردات */
+    width:90%;
+    margin:20px auto 0;
+}
+
+/* الكارد */
+.drink-card{
+    width:42%;                /* كاردان في كل سطر */
+    min-height:220px;         /* حجم أكبر ومتوازن */
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    background:#76c993;
+    padding:25px 30px;
+    border-radius:18px;
+
+    box-shadow:0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* الصورة */
+.drink-image img{
+    width:160px;
+    height:160px;
+    object-fit:cover;
+
+    background:#e60000;
+    padding:5px;
+    border-radius:14px;
+}
+
+/* النص */
+.drink-info{
+    flex:1;
+    color:#ffffff;
+    line-height:1.7;
+}
+
+/* اسم المشروب */
+.drink-info h3{
+    margin:0 0 5px;
+    font-size:36px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#ffffff;
+}
+
+/* الوصف */
+.drink-info p{
+    margin:0 0 5px;
+    font-size:14px;
+    line-height:1.5;
+    text-transform:uppercase;
+    color:#ffffff;
+}
+
+/* السعر */
+.drink-info span{
+    display:block;
+    font-size:30px;
+    font-weight:700;
+    color:#ffffff;
+}
+
+/* الهاتف */
+@media (max-width:768px){
+
+    /* كارد واحد في كل سطر */
+    .drink-card{
+        width:100%;
+        min-height:auto;
+        padding:15px 18px;
+        gap:15px;
+    }
+
+    /* الصورة أصغر */
+    .drink-image img{
+        width:90px;
+        height:90px;
+    }
+
+    /* النص */
+    .drink-info h3{
+        font-size:22px;
+    }
+
+    .drink-info p{
+        font-size:10px;
+        line-height:1.4;
+    }
+
+    .drink-info span{
+        font-size:22px;
+    }
+}
