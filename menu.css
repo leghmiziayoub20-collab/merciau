@@ -28,7 +28,7 @@ header{
 /* ================= LOGO (ZONE 01) ================= */
 .logo img{
     width:100px;
-    margin-bottom:8px;
+    margin-bottom:25px;
 }
 
 /* ================= MENU BUTTON ================= */
@@ -80,6 +80,8 @@ header{
     padding:10px 0;
     text-align:center;
     transition:0.3s;
+    
+    
 }
 
 .main-menu li:hover{
@@ -93,6 +95,25 @@ header{
     font-weight:bold;
     letter-spacing:1px;
 }
+
+.esp { 
+
+margin-left: -35px;
+
+}
+
+.espr { 
+
+margin-right: -60px;
+
+}
+
+
+
+
+
+
+
 
 /* ================= HERO TITLE (ZONE 03) ================= */
 .hero-title h2{
@@ -122,6 +143,8 @@ header{
     list-style:none;
     display:flex;
     gap:4px;
+    background:rgb(102,53,53);  /* يجعل الفراغات (gap) باللون البني */
+    padding:0;                  /* بدون حواف إضافية */
 }
 
 .sub-menu li{
@@ -380,8 +403,8 @@ header{
 
 /* الصورة المكبرة */
 .modal-image{
-    max-width:50%;
-    max-height:50%;
+    max-width:90%;
+    max-height:90%;
     border-radius:20px;
     box-shadow:0 10px 40px rgba(0,0,0,0.4);
     animation:zoomIn 0.3s ease;
@@ -432,4 +455,9 @@ header{
     .drink-info span{
         font-size:22px;
     }
+}
+
+/* خلفية الصفحة الرئيسية */
+main{
+    background-color:#f0fff2;
 }

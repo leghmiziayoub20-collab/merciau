@@ -71,22 +71,51 @@ body{
 }
 
 
+
+/* إزالة جميع التأثيرات من أول وآخر <li> الفارغين */
+.main-menu li:first-child,
+.main-menu li:last-child{
+    transition:none;      /* إلغاء الـ animation */
+}
+
+/* منع تغيير اللون عند المرور بالماوس */
+.main-menu li:first-child:hover,
+.main-menu li:last-child:hover{
+    background:linear-gradient(to bottom, #a8e8ba, #76c993);
+}
+
+
+
+
 /* ===== MOBILE ONLY ===== */
 @media (max-width:768px){
 
     /* زر يظهر فقط في الهاتف */
     .menu-toggle{
-        display:block;
-        position:fixed;
-        top:15px;
-        right:20px;
-        font-size:32px;
-        background:none;
-        border:none;
-        cursor:pointer;
-        z-index:2000;
-        color:white;
-    }
+    width:60%;          /* أصغر من قبل */
+    max-width:220px;    /* حد أقصى أصغر */
+
+    height:40px;        /* أقل ارتفاع */
+
+    margin-top:10px;
+
+    background:linear-gradient(to bottom, #a8e8ba, #76c993);
+
+    border:none;
+    border-radius:10px;
+
+    color:white;
+    font-size:18px;     /* نص أصغر */
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
 
     /* نخفي النافبار ونخليه dropdown */
     .main-navbar{
@@ -336,3 +365,97 @@ body{
     }
 }
 
+/* صندوق الشريط المتحرك */
+.title-box{
+    width:100%;
+    background-color:#663535;
+    overflow:hidden;          /* إخفاء النص الخارج */
+    white-space:nowrap;       /* إبقاء النص في سطر واحد */
+    padding:0px 0;
+}
+
+/* النصوص المتحركة */
+.title-box h2{
+    display:inline-block;
+    color:#ffffff;
+    font-size:20px;
+    letter-spacing:3px;
+    margin:0;
+    padding-right:80px;       /* مسافة بين النصين */
+
+    animation:marquee 15s linear infinite;
+}
+
+/* الحركة المستمرة بدون توقف */
+@keyframes marquee{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+/* الهاتف */
+@media (max-width:768px){
+    .title-box{
+        padding:14px 0;
+    }
+
+    .title-box h2{
+        font-size:11.5px;
+        letter-spacing:1px;
+        padding-right:90px;
+        animation-duration:12s;
+    }
+}
+
+
+/* توسيط الخريطة في منتصف الصفحة */
+.map-container{
+    width:90%;
+    max-width:1000px;
+    margin:50px auto;      /* auto تجعل العنصر في المنتصف */
+    display:flex;
+    justify-content:center;
+    
+    
+}
+
+/* تنسيق الخريطة */
+.map-container iframe{
+    width:100%;
+    height:450px;
+    border:0;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    
+}
+
+
+/* الهاتف */
+@media (max-width:768px){
+    .map-container{
+        width:95%;
+        margin:30px auto;
+    }
+
+    .map-container iframe{
+        height:300px;
+        border-radius:18px;
+    }
+}
+
+
+.about-section {
+  position: relative;
+  z-index: 0;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color:#b3ffbd;
+  z-index: -1;
+}
