@@ -461,3 +461,62 @@ margin-right: -60px;
 main{
     background-color:#f0fff2;
 }
+
+
+
+
+
+.menu-toggle{
+    width:100%;
+    max-width:720px;
+
+    height:20px;
+
+    margin-top:208px; /* تحت اللوجو */
+
+right: 0px;
+
+    background:linear-gradient(to bottom, #a8e8ba, #76c993);
+
+    border:none;
+    border-radius:10px;
+
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+
+
+.menu-toggle{
+    display:none;
+}
+
+@media (max-width:768px){
+    .menu-toggle{
+        display:flex;
+    }
+}
+
+.menu-toggle{
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    transition: 0.3s;
+  margin-top: 0px;
+
+  border-radius: 0%;
+
+}
+
+.menu-toggle:active{
+    transform: scale(0.98);
+}

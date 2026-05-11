@@ -459,3 +459,48 @@ body{
   background-color:#b3ffbd;
   z-index: -1;
 }
+
+
+
+
+
+
+.menu-toggle{
+    width:100%;
+    max-width:720px;
+
+    height:20px;
+
+    margin-top:70px; /* تحت اللوجو */
+
+right: 0px;
+
+    background:linear-gradient(to bottom, #a8e8ba, #76c993);
+
+    border:none;
+    border-radius:0px;
+
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+
+
+.menu-toggle{
+    display:none;
+}
+
+@media (max-width:768px){
+    .menu-toggle{
+        display:flex;
+    }
+}
