@@ -115,6 +115,7 @@ margin-right: -60px;
 
 
 
+
 /* ================= HERO TITLE (ZONE 03) ================= */
 .hero-title h2{
     font-family:'Pinyon Script', cursive;
@@ -191,12 +192,15 @@ margin-right: -60px;
         top:80px;
         right:10px;
         width:270px;
-        background:rgb(102,53,53);
+        background: #76c993;
+
         border-radius:12px;
         overflow:hidden;
         box-shadow:0 10px 25px rgba(0,0,0,0.25);
         z-index:1500;
     }
+
+
 
     /* تظهر عند الضغط */
     .sub-navbar.active{
@@ -214,13 +218,22 @@ margin-right: -60px;
         background:none;
         padding:14px 18px;
         text-align:right;
+         background: #76c993;
+
         border-bottom:1px solid rgba(255,255,255,0.1);
     }
 
     .sub-menu li a{
-        color:#ffffff;
+        color:#000000;
         font-size:14px;
     }
+.esp { 
+
+margin-left: 0px;
+
+}
+
+
 }
 
 
@@ -477,12 +490,12 @@ main{
 right: 0px;
 
     background:linear-gradient(to bottom, #a8e8ba, #76c993);
-
+    height: 35px;
     border:none;
     border-radius:10px;
 
     color:white;
-    font-size:18px;
+    font-size:28px;
     font-weight:bold;
 
     cursor:pointer;
@@ -492,6 +505,10 @@ right: 0px;
     justify-content:center;
 
     box-shadow:0 3px 10px rgba(0,0,0,0.2);
+
+
+
+
 }
 
 
@@ -520,3 +537,4 @@ right: 0px;
 .menu-toggle:active{
     transform: scale(0.98);
 }
+

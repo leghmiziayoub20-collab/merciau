@@ -17,7 +17,7 @@
     <!-- zone 1 -->
     <div class="logo" >
      <a  href=""><img src="merci/accueillogopage.png" alt=""></a>   
-<button class="menu-toggle">☰</button>
+<button class="menu-toggle" style="height: 28px;">☰</button>
     <!-- zone 2 -->
     <nav class="main-navbar">
         <ul class="main-menu">
@@ -25,7 +25,7 @@
             <li  ><a href="#ACCUEIL">ACCUEIL</a></li>
             <li><a href="Untitled-1.html" target=" MENU "> MENU </a></li>
             <li><a href="#TROUVER">OÙ NOUS TROUVER</a></li>  
-            <li><a href="#">NOUS CONTACTER</a></li>
+            <li><a href="#CONTACTER">NOUS CONTACTER</a></li>
           <li></li>
         </ul>
     </nav>
@@ -42,8 +42,8 @@
  <section>
 <!-- titre -->
 <div class="title-box">
-    <h2>NOUVEAU A ALFORTVILLE - OUVERT 7J/7 - CAFÉ D'EXCEPTION</h2> 
-    <h2>NOUVEAU A ALFORTVILLE - OUVERT 7J/7 - CAFÉ D'EXCEPTION</h2>
+    <h2>Nouveau à Alfortville - Ouvert 7j/7 - Barista - Café d'exception de spécialité - Matcha - Ice Coffee - Bowls - Cake - Sandwich Italien - </h2> 
+    
 </div>
 <!-- img+prgraphe -->
 <div class="about-section">
@@ -53,53 +53,57 @@
 
     <!-- النص -->
     <div class="about-text">
- <h3>Merci, Au Revoir !</h3>
+        <h3>Merci, Au Revoir !</h3>
+
         <p>
-           
-
-            Le Coffee Shop est situé au 18 rue Soufflot, au cœur  du Quartier Latin <br>
-            dans le 5ème arrondissement de Paris.<br>
-
-            La boutique est située dans l’une des rues les plus emblématiques <br>
-             de Paris, à mi-chemin entre le Panthéon et le jardin du Luxembourg.
+            L’idée derrière Merci Au Revoir, c’est avant tout l’amour du bon café.
+            Nous avons voulu créer un véritable comptoir de barista où chaque boisson
+            est préparée avec soin, qu’il s’agisse de votre espresso du matin,
+            d’un matcha bien frais ou de nos créations originales comme l’Ube Latte.
         </p>
 
-     <p>
-           
-
-            Le Coffee Shop est situé au 18 rue Soufflot, au cœur  du Quartier Latin <br>
-            dans le 5ème arrondissement de Paris.<br>
-
-            La boutique est située dans l’une des rues les plus emblématiques <br>
-             de Paris, à mi-chemin entre le Panthéon et le jardin du Luxembourg.
+        <p>
+            Tout est pensé pour être emporté : des sandwichs italiens préparés à la minute
+            avec une charcuterie de qualité, des açaí bowls généreusement garnis de fruits frais,
+            ainsi que des cakes maison parfaits pour le goûter.
         </p>
 
-
+        <p>
+            Il n’y a pas de chaises, mais nous mettons tout notre cœur dans ce que
+            nous préparons pour vous. On passe, on se salue, puis on repart avec
+            quelque chose de vraiment délicieux à la main.
+        </p>
     </div>
 
 </div>
 
 
 
- <!-- secton-hero -->
-        <section class="hero">
-    
-    <img src="merci/menuback.png" alt="">
-</section>
+
+
+
 
 
 <div class="title-box">
-    <h2>NOUVEAU A ALFORTVILLE - OUVERT 7J/7 - CAFÉ D'EXCEPTION</h2> 
-    <h2>NOUVEAU A ALFORTVILLE - OUVERT 7J/7 - CAFÉ D'EXCEPTION</h2>
+     <h2>Nouveau à Alfortville - Ouvert 7j/7 - Barista - Café d'exception de spécialité - Matcha - Ice Coffee - Bowls - Cake - Sandwich Italien - </h2> 
+    
 </div>
 
 <!-- OÙ NOUS TROUVER -->
 
 
+<div class="section-title">
+    <h2 id="TROUVER">NOUS TROUVER</h2>
+</div>
+
+
+
+
 <div class="about-section" >
+    
 <!-- وضع الخريطة داخل حاوية -->
 <div class="map-container">
-    <iframe  id="TROUVER"
+    <iframe  
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.550879388588!2d2.4142617!3d48.8095498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67356c12d7c5d%3A0x3ab24821eb47c3c3!2sMerci%20au%20revoir!5e0!3m2!1sfr!2sdz!4v1778449438671!5m2!1sfr!2sdz"
         allowfullscreen
         loading="lazy"
@@ -109,6 +113,58 @@
 
 </div>
 
+<!-- form -->
+
+<div class="title-box">
+     <h2>Nouveau à Alfortville - Ouvert 7j/7 - Barista - Café d'exception de spécialité - Matcha - Ice Coffee - Bowls - Cake - Sandwich Italien - </h2> 
+    
+</div>
+
+<!-- OÙ NOUS TROUVER -->
+
+
+<div class="section-title">
+    <h2 id="CONTACTER"  >NOUS CONTACTER</h2>
+</div>
+
+
+<div class="about-section" >
+    
+<div>
+
+
+
+    <form id="contact-form">
+
+  <input type="text" name="from_name" placeholder="Nom" required>
+
+  <input type="email" name="from_email" placeholder="Email" required>
+
+  <!-- التقييم -->
+  <select name="rating" required>
+    <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+    <option value="4">⭐⭐⭐⭐ Très bien</option>
+    <option value="3">⭐⭐⭐ Bien</option>
+    <option value="2">⭐⭐ Moyen</option>
+    <option value="1">⭐ Faible</option>
+  </select>
+
+  <textarea name="message" placeholder="Message" required></textarea>
+
+  <button type="submit">Envoyer</button>
+
+</form>
+
+
+
+
+
+
+
+    
+</div>
+
+</div>
 
 
 
@@ -141,5 +197,39 @@ btn.addEventListener("click", () => {
     mainNav.classList.toggle("active");
 });
 </script>
+
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+emailjs.init("8HklEOw_ih_4_50pz"); // ضع مفتاحك
+
+document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let ratingValue = this.rating.value;
+
+    let stars = "⭐".repeat(ratingValue);
+
+    emailjs.send("service_7keww6b", "template_9761eq7", {
+        from_name: this.from_name.value,
+        from_email: this.from_email.value,
+        message: this.message.value,
+        rating_stars: stars
+    })
+    .then(() => {
+        alert("Merci ! Message envoyé ⭐");
+        this.reset();
+    })
+    .catch((error) => {
+        alert("Erreur d'envoi !");
+        console.log(error);
+    });
+});
+</script>
+
+
 </body>
 </html>
