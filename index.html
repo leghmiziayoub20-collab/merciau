@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-
+<link rel="icon" type="image/x-icon" href="merci/FAVICON (1).png">   
    <!-- my css  -->
     <link rel="stylesheet" href="stylye.css">
 </head>
@@ -134,32 +134,10 @@
 
 
 
-    <form id="contact-form">
-
-  <input type="text" name="from_name" placeholder="Nom" required>
-
-  <input type="email" name="from_email" placeholder="Email" required>
-
-  <!-- التقييم -->
-  <select name="rating" required>
-    <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-    <option value="4">⭐⭐⭐⭐ Très bien</option>
-    <option value="3">⭐⭐⭐ Bien</option>
-    <option value="2">⭐⭐ Moyen</option>
-    <option value="1">⭐ Faible</option>
-  </select>
-
-  <textarea name="message" placeholder="Message" required></textarea>
-
-  <button type="submit">Envoyer</button>
-
-</form>
 
 
 
-
-
-
+    
 
     
 </div>
@@ -197,39 +175,5 @@ btn.addEventListener("click", () => {
     mainNav.classList.toggle("active");
 });
 </script>
-
-
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-<script>
-emailjs.init("8HklEOw_ih_4_50pz"); // ضع مفتاحك
-
-document.getElementById("contact-form").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    let ratingValue = this.rating.value;
-
-    let stars = "⭐".repeat(ratingValue);
-
-    emailjs.send("service_7keww6b", "template_9761eq7", {
-        from_name: this.from_name.value,
-        from_email: this.from_email.value,
-        message: this.message.value,
-        rating_stars: stars
-    })
-    .then(() => {
-        alert("Merci ! Message envoyé ⭐");
-        this.reset();
-    })
-    .catch((error) => {
-        alert("Erreur d'envoi !");
-        console.log(error);
-    });
-});
-</script>
-
-
 </body>
 </html>
