@@ -349,7 +349,7 @@ margin-left: 0px;
 /* النص */
 .drink-info{
     flex:1;
-    color:#ffffff;
+    color:#000000;
     line-height:1.7;
 }
 
@@ -359,7 +359,7 @@ margin-left: 0px;
     font-size:36px;
     font-weight:700;
     letter-spacing:1px;
-    color:#ffffff;
+    color:#000000;
 }
 
 /* الوصف */
@@ -368,7 +368,7 @@ margin-left: 0px;
     font-size:14px;
     line-height:1.5;
     text-transform:uppercase;
-    color:#ffffff;
+    color:#000000;
 }
 
 /* السعر */
@@ -376,7 +376,7 @@ margin-left: 0px;
     display:block;
     font-size:30px;
     font-weight:700;
-    color:#ffffff;
+    color:#000000;
 }
 
 
