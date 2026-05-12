@@ -8,6 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="merci/FAVICON (1).png">   
+
+
+<!-- Bootstarp CSS -->
+    <link rel="stylesheet" href="./lib/bootstrap-5/css/bootstrap.min.css">
+    
+
+
    <!-- my css  -->
     <link rel="stylesheet" href="stylye.css">
 </head>
@@ -127,25 +134,35 @@
     <h2 id="CONTACTER"  >NOUS CONTACTER</h2>
 </div>
 
+<div class="section-title">
 
-<div class="about-section" >
-    
-<div>
+  <h3.section-titlee >Merci, Au Revoir</h3>
 
+  <form class="form-box">
 
+    <div class="row">
+      <div class="field">
+        <label for="name">nome <sup>*</sup></label>
+        <input type="text" id="name" name="name" required>
+      </div>
 
+      <div class="field">
+        <label for="email">email <sup>*</sup></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
 
+    <div class="field full">
+      <label for="message">message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
 
+    <button type="submit" onclick="Email()">ok</button>
 
-    
-
-    
+  </form>
+                                    
 </div>
-
-</div>
-
-
-
+ 
 
 
 
@@ -175,5 +192,54 @@ btn.addEventListener("click", () => {
     mainNav.classList.toggle("active");
 });
 </script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "8HklEOw_ih_4_50pz",
+      });
+   })();
+</script>
+
+
+<script>
+
+function Email(){
+let emailsParms ={ 
+
+    name : document.getElementById('name').value,
+     email : document.getElementById('email').value,
+      message : document.getElementById('message').value,
+}
+
+const service_ID =' service_ivm1lso';
+const temp_ID =' template_3n3qu28';
+
+emailjs.send(service_ID,temp_ID, emailsParms).then(
+            (res)=>{
+
+                document.getElementById ('name').value = '';
+                 document.getElementById ('email').value = '';
+                  document.getElementById ('message').value = '';
+                  console.log(res);
+                  alert('message was sent');
+
+
+            }
+
+
+
+)
+
+
+.catch((err) => console.log(err));
+
+
+}
+</script>
+
 </body>
 </html>
