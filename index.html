@@ -17,6 +17,18 @@
 
    <!-- my css  -->
     <link rel="stylesheet" href="stylye.css">
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "8HklEOw_ih_4_50pz",
+      });
+   })();
+</script>
+
 </head>
 <body>
   <header >
@@ -136,8 +148,7 @@
 
 <div class="section-title">
 
-  <h3.section-titlee >Merci, Au Revoir</h3>
-
+  
   <form class="form-box">
 
     <div class="row">
@@ -154,10 +165,10 @@
 
     <div class="field full">
       <label for="message">message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <textarea id="message" name="message" rows="5" required></textarea>
     </div>
 
-    <button type="submit" onclick="Email()">ok</button>
+    <button type="submit" id="btn" >ok</button>
 
   </form>
                                     
@@ -193,53 +204,10 @@ btn.addEventListener("click", () => {
 });
 </script>
 
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "8HklEOw_ih_4_50pz",
-      });
-   })();
-</script>
-
-
-<script>
-
-function Email(){
-let emailsParms ={ 
-
-    name : document.getElementById('name').value,
-     email : document.getElementById('email').value,
-      message : document.getElementById('message').value,
-}
-
-const service_ID =' service_ivm1lso';
-const temp_ID =' template_3n3qu28';
-
-emailjs.send(service_ID,temp_ID, emailsParms).then(
-            (res)=>{
-
-                document.getElementById ('name').value = '';
-                 document.getElementById ('email').value = '';
-                  document.getElementById ('message').value = '';
-                  console.log(res);
-                  alert('message was sent');
-
-
-            }
+<script src="Untitled-1.js"></script>
 
 
 
-)
-
-
-.catch((err) => console.log(err));
-
-
-}
-</script>
 
 </body>
 </html>
