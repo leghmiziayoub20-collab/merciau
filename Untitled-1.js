@@ -1,7 +1,7 @@
 function sendEmail() {
     const Data = {
         to_email: "acrb371@gmail.com",
-        name: document.getElementById("name").value,
+        nam: document.getElementById("name").value,
         email: document.getElementById("email").value,
         subject: "support",
         message: `
@@ -18,6 +18,19 @@ message: ${document.getElementById("message").value}
         .catch((error) => {
             alert(error.text || error.message);
         });
+
+emailjs.send("service_icpvtwp", "template_cfyvysm", Data)
+    .then(() => {
+        alert("sent successfully");
+
+        // مسح جميع الحقول بعد الإرسال
+        document.querySelector(".form-box").reset();
+    })
+    .catch((error) => {
+        alert(error.text || error.message);
+    });
+
+
 }
 
 document.querySelector(".form-box").addEventListener("submit", (e) => {
