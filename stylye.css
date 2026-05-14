@@ -291,7 +291,7 @@ body{
         margin-left: 0;
         padding-left: 0;
         padding-right: 0px;
-            height: 205.200px;
+             height: auto;
         
         direction: ltr;        /* اتجاه الكتابة من اليسار إلى اليمين */
         white-space: normal;   /* يسمح بالانتقال الطبيعي للأسطر */
