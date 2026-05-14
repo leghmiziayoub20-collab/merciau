@@ -290,12 +290,15 @@ body{
         text-indent: 0;        /* إلغاء أي مسافة بادئة */
         margin-left: 0;
         padding-left: 0;
+        padding-right: 0px;
+            height: 205.200px;
+        
         direction: ltr;        /* اتجاه الكتابة من اليسار إلى اليمين */
         white-space: normal;   /* يسمح بالانتقال الطبيعي للأسطر */
 
          width: 390.400px;
-    height: 205.200px;
-         padding-right: 0px;
+    
+        
 
     }
 }
