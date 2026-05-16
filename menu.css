@@ -73,6 +73,7 @@ header{
     width:100%;
     display:flex;
     justify-content:center;
+    
 }
 
 .main-menu{
@@ -80,6 +81,7 @@ header{
     list-style:none;
     display:flex;
     gap:3px;
+    
 }
 
 .main-menu li{
@@ -94,6 +96,7 @@ header{
 
 .main-menu li:hover{
     background:linear-gradient(to bottom, #bdf2ca, #89d7a4);
+    
 }
 
 .main-menu li a{
@@ -102,6 +105,7 @@ header{
     font-size:21px;
     font-weight:bold;
     letter-spacing:1px;
+    text-align: center;      /* توسيط النص أفقيًا */
 }
 
 .esp { 
@@ -167,12 +171,15 @@ margin-right: -60px;
     background:#cfe6d4;
 }
 
-.sub-menu li a{
-    text-decoration:none;
-    color:rgb(102,53,53);
-    font-size:14px;
-    font-weight:bold;
-    letter-spacing:0.5px;
+.sub-menu li a {
+    display: block;              /* يجعل الرابط يأخذ عرض العنصر بالكامل */
+    width: 100%;                 /* عرض كامل داخل li */
+    text-decoration: none;
+    color: rgb(102, 53, 53);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;          /* توسيط النص داخل الرابط */
 }
 
 /* ================= MOBILE ================= */
